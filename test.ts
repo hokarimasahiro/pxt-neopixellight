@@ -1,1 +1,2 @@
-// テストはここに来ます。このパッケージが拡張機能として使用されるときにはコンパイルされません。
+neopixel.initNeopixel(DigitalPin.P1, 4);
+neopixel.showColor(NeoPixelColors.Green)
