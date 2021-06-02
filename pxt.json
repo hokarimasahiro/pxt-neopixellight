@@ -6,9 +6,8 @@
         "microphone": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
-        "README.md"
+        "README.md",
+        "neopixel.ts"
     ],
     "testFiles": [
         "test.ts"
