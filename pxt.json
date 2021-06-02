@@ -7,7 +7,8 @@
     },
     "files": [
         "README.md",
-        "neopixel.ts"
+        "neopixel.ts",
+        "sendBuffer.asm"
     ],
     "testFiles": [
         "test.ts"
