@@ -47,7 +47,7 @@ namespace neopixel {
      */
     //% block="show color %rgb=neopixel_colors"
     //% weight=85 blockGap=8
-    export function showColor(rgb: NeoPixelColors) {
+    export function showColor(rgb: number) {
 		for (let i=0;i < _length;i++){
 	        setPixelColor(i,rgb);
 	    }
@@ -63,7 +63,7 @@ namespace neopixel {
     //% block="set pixel color at %pixeloffset|to %rgb=neopixel_colors"
     //% blockGap=8
     //% weight=80
-    export function setPixelColor(pixeloffset: number, rgb: NeoPixelColors): void {
+    export function setPixelColor(pixeloffset: number, rgb: number): void {
         _buf[pixeloffset * 3 + 0] = unpackG(rgb) * (_brightness / 255);
         _buf[pixeloffset * 3 + 1] = unpackR(rgb) * (_brightness / 255);
         _buf[pixeloffset * 3 + 2] = unpackB(rgb) * (_brightness / 255);
@@ -87,9 +87,9 @@ namespace neopixel {
     //% weight=10
     //% blockId="init_neopixel" block="init neopixel pin %pin length %length"
     //% parts="neopixel"
-    export function initNeopixel(pin: DigitalPin,length: Number): void {
+    export function initNeopixel(pin: DigitalPin,length: number): void {
         _pin = pin;
-//        _length = length >> 0;
+        _length = length >> 0;
         _buf = pins.createBuffer(_length);
         pins.digitalWritePin(_pin, 0);
         // don't yield to avoid races on initialization
