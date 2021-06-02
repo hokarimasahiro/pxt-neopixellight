@@ -90,7 +90,7 @@ namespace neopixel {
     export function initNeopixel(pin: DigitalPin,length: number): void {
         _pin = pin;
         _length = length >> 0;
-        _buf = pins.createBuffer(_length);
+        _buf = pins.createBuffer(_length * 3);
         pins.digitalWritePin(_pin, 0);
         // don't yield to avoid races on initialization
     }
