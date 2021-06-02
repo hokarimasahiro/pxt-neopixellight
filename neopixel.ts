@@ -45,8 +45,7 @@ namespace neopixel {
      * Shows all LEDs to a given color (range 0-255 for r, g, b).
      * @param rgb RGB color of the LED
      */
-    //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors"
-    //% strip.defl=strip
+    //% blockId="set_strip_color" block="show color %rgb=neopixel_colors"
     //% weight=85 blockGap=8
     //% parts="neopixel"
     export function showColor(rgb: number) {
@@ -62,8 +61,7 @@ namespace neopixel {
      * @param pixeloffset position of the NeoPixel in the strip
      * @param rgb RGB color of the LED
      */
-    //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=neopixel_colors"
-    //% strip.defl=strip
+    //% blockId="set_pixel_color" block="set pixel color at %pixeloffset|to %rgb=neopixel_colors"
     //% blockGap=8
     //% weight=80
     //% parts="neopixel"
@@ -78,8 +76,7 @@ namespace neopixel {
      * Set the brightness of the strip. This flag only applies to future operation.
      * @param brightness a measure of LED brightness in 0-255. eg: 255
      */
-    //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
-    //% strip.defl=strip
+    //% blockId="set_brightness" block="set brightness %brightness" blockGap=8
     //% weight=59
     //% parts="neopixel"
     export function setBrightness(brightness:number): void {
@@ -90,7 +87,7 @@ namespace neopixel {
      * initiarize neopixel
      */
     //% weight=10
-    //% blockId="neopixel_init_neopixel" block="%init|set pin %pin length length"
+    //% blockId="init_neopixel" block="init neopixel pin %pin length %length"
     //% parts="neopixel"
     export function initNeopixel(pin: DigitalPin,length: Number): void {
         _pin = pin;
@@ -107,8 +104,7 @@ namespace neopixel {
      * @param blue value of the blue channel between 0 and 255. eg: 255
      */
     //% weight=1
-    //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
-    //% advanced=true
+    //% blockId="rgb" block="red %red|green %green|blue %blue"
     export function rgb(red: number, green: number, blue: number): number {
         return packRGB(red, green, blue);
     }
@@ -117,8 +113,7 @@ namespace neopixel {
      * Gets the RGB value of a known color
     */
     //% weight=2 blockGap=8
-    //% blockId="neopixel_colors" block="%color"
-    //% advanced=true
+    //% blockId="colors" block="%color"
     export function colors(color: NeoPixelColors): number {
         return color;
     }
