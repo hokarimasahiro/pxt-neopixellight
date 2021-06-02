@@ -45,10 +45,9 @@ namespace neopixel {
      * Shows all LEDs to a given color (range 0-255 for r, g, b).
      * @param rgb RGB color of the LED
      */
-    //% blockId="set_strip_color" block="show color %rgb=neopixel_colors"
+    //% block="show color %rgb=neopixel_colors"
     //% weight=85 blockGap=8
-    //% parts="neopixel"
-    export function showColor(rgb: number) {
+    export function showColor(rgb: NeoPixelColors) {
 		for (let i=0;i < _length;i++){
 	        setPixelColor(i,rgb);
 	    }
@@ -61,11 +60,10 @@ namespace neopixel {
      * @param pixeloffset position of the NeoPixel in the strip
      * @param rgb RGB color of the LED
      */
-    //% blockId="set_pixel_color" block="set pixel color at %pixeloffset|to %rgb=neopixel_colors"
+    //% block="set pixel color at %pixeloffset|to %rgb=neopixel_colors"
     //% blockGap=8
     //% weight=80
-    //% parts="neopixel"
-    export function setPixelColor(pixeloffset: number, rgb: number): void {
+    export function setPixelColor(pixeloffset: number, rgb: NeoPixelColors): void {
         _buf[pixeloffset * 3 + 0] = unpackG(rgb) * (_brightness / 255);
         _buf[pixeloffset * 3 + 1] = unpackR(rgb) * (_brightness / 255);
         _buf[pixeloffset * 3 + 2] = unpackB(rgb) * (_brightness / 255);
