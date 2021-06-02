@@ -90,6 +90,7 @@ namespace neopixel {
      * initiarize neopixel
      */
     //% weight=10
+    //% blockId="neopixel_init_neopixel" block="%init|set pin %pin length length"
     //% parts="neopixel"
     export function initNeopixel(pin: DigitalPin,length: Number): void {
         _pin = pin;
