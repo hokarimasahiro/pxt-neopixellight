@@ -1,14 +1,14 @@
 input.onButtonPressed(Button.A, function () {
-    neopixel.showColor(neopixel.NeoPixelColors.Red)
+    neopixel.showColor(neopixel.Colors.Red)
 })
 input.onButtonPressed(Button.AB, function () {
-    neopixel.showColor(neopixel.NeoPixelColors.Black)
+    neopixel.showColor(neopixel.Colors.Black)
 })
 input.onButtonPressed(Button.B, function () {
-    neopixel.showColor(neopixel.NeoPixelColors.Blue)
+    neopixel.showColor(neopixel.Colors.Blue)
 })
 neopixel.initNeopixel(DigitalPin.P1, 4)
-neopixel.showColor(neopixel.NeoPixelColors.Green)
+neopixel.showColor(neopixel.Colors.Green)
 basic.forever(function () {
 	
 })
