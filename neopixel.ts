@@ -5,7 +5,7 @@
 /**
  * Functions to operate NeoPixel strips.
  */
-//% weight=10 color=#2699BF icon="\uf110" block="neopixel"
+//% color=#2699BF icon="\uf110" block="neopixel"
 namespace neopixel {
 export enum Colors {
     //% block=red
@@ -46,7 +46,7 @@ export enum Colors {
      * @param pin digital pin of neopixel
      * @param length number of neopixel
      */
-    //% blockId="initNeopixel" block="init neopixel pin %pin length %length"
+    //% block="init neopixel pin %pin length %length"
     export function initNeopixel(pin: DigitalPin,length: number): void {
         _pin = pin;
         _length = length >> 0;
@@ -59,7 +59,7 @@ export enum Colors {
      * Shows all LEDs to a given color (range 0-255 for r, g, b).
      * @param rgb RGB color of the LED
      */
-    //% blockId="showColor"  block="show color %rgb=Colors"
+    //% block="show color %rgb=Colors"
     export function showColor(rgb: number) {
 		for (let i=0;i < _length;i++){
 	        setPixelColor(i,rgb);
@@ -72,7 +72,7 @@ export enum Colors {
      * @param pixeloffset position of the NeoPixel in the strip
      * @param rgb RGB color of the LED
      */
-    //% blockId="setPixelColor" block="set pixel color at %pixeloffset|to %rgb=Colors"
+    //% block="set pixel color at %pixeloffset|to %rgb=Colors"
     export function setPixelColor(pixeloffset: number, rgb: number): void {
         _buf[pixeloffset * 3 + 0] = unpackG(rgb) * (_brightness / 255);
         _buf[pixeloffset * 3 + 1] = unpackR(rgb) * (_brightness / 255);
@@ -84,7 +84,7 @@ export enum Colors {
      * Set the brightness of the strip. This flag only applies to future operation.
      * @param brightness a measure of LED brightness in 0-255. eg: 255
      */
-    //% blockId="setBrightness" block="set brightness %brightness" blockGap=8
+    //% block="set brightness %brightness" blockGap=8
     export function setBrightness(brightness:number): void {
         _brightness = brightness & 0xff;
     }
@@ -95,7 +95,7 @@ export enum Colors {
      * @param green value of the green channel between 0 and 255. eg: 255
      * @param blue value of the blue channel between 0 and 255. eg: 255
      */
-    //% blockId="rgb" block="red %red|green %green|blue %blue"
+    //% block="red %red|green %green|blue %blue"
     export function rgb(red: number, green: number, blue: number): number {
         return packRGB(red, green, blue);
     }
@@ -103,7 +103,7 @@ export enum Colors {
     /**
      * Gets the RGB value of a known color
     */
-    //% blockId="colors" block="%color"
+    //% block="%color"
     export function colors(color: Colors): number {
         return color;
     }
