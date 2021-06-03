@@ -43,8 +43,8 @@ export enum Colors {
 
     /**
      * initiarize the neopixel strips
-     * @param pin digital pin of neopixel
-     * @param length number of neopixel
+     * @param pin digital pin of neopixel, eg:DigitalPin.P1
+     * @param length number of neopixel, eg:4
      */
     //% block="init neopixel pin %pin length %length"
     export function initNeopixel(pin: DigitalPin,length: number): void {
@@ -52,7 +52,6 @@ export enum Colors {
         _length = length >> 0;
         _buf = pins.createBuffer(_length * 3);
         pins.digitalWritePin(_pin, 0);
-        // don't yield to avoid races on initialization
     }
 
     /**
