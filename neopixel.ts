@@ -1,7 +1,13 @@
 /**
  * Well known colors for a NeoPixel strip
  */
-enum NeoPixelColors {
+
+/**
+ * Functions to operate NeoPixel strips.
+ */
+//% weight=5 color=#2699BF icon="\uf110"
+namespace neopixel {
+export enum NeoPixelColors {
     //% block=red
     Red = 0xFF0000,
     //% block=orange
@@ -23,12 +29,6 @@ enum NeoPixelColors {
     //% block=black
     Black = 0x000000
 }
-
-/**
- * Functions to operate NeoPixel strips.
- */
-//% weight=5 color=#2699BF icon="\uf110"
-namespace neopixel {
     /**
      * A NeoPixel strip
      */
