@@ -59,7 +59,7 @@ export enum Colors {
      * Shows all LEDs to a given color (range 0-255 for r, g, b).
      * @param rgb RGB color of the LED
      */
-    //% block="show color %rgb=Colors"
+    //% blockGap=5 block="show color %rgb=Colors"
     export function showColor(rgb: number) {
 		for (let i=0;i < _length;i++){
 	        setPixelColor(i,rgb);
