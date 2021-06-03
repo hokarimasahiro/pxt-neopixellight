@@ -103,7 +103,7 @@ export enum Colors {
      * Gets the RGB value of a known color
      * @param rgb RGB color of the LED, eg:Colors.Red
     */
-    //% block="color %color"
+    //% block="%color"
     export function colors(color: Colors): number {
         return color;
     }
