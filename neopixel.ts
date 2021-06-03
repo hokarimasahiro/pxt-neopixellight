@@ -56,7 +56,7 @@ export enum Colors {
 
     /**
      * Shows all LEDs to a given color (range 0-255 for r, g, b).
-     * @param rgb RGB color of the LED
+     * @param rgb RGB color of the LED, eg:Colors.Red
      */
     //% block="show color %rgb=Colors"
     export function showColor(rgb: number) {
@@ -68,8 +68,8 @@ export enum Colors {
 
     /**
      * Set LED to a given color (range 0-255 for r, g, b).
-     * @param pixeloffset position of the NeoPixel in the strip
-     * @param rgb RGB color of the LED
+     * @param pixeloffset position of the NeoPixel in the strip, eg:0
+     * @param rgb RGB color of the LED, eg:Colors.Red
      */
     //% block="set pixel color at %pixeloffset|to %rgb=Colors"
     export function setPixelColor(pixeloffset: number, rgb: number): void {
@@ -83,7 +83,7 @@ export enum Colors {
      * Set the brightness of the strip. This flag only applies to future operation.
      * @param brightness a measure of LED brightness in 0-255. eg: 255
      */
-    //% block="set brightness %brightness" blockGap=8
+    //% block="set brightness %brightness"
     export function setBrightness(brightness:number): void {
         _brightness = brightness & 0xff;
     }
