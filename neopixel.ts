@@ -5,7 +5,7 @@
 /**
  * Functions to operate NeoPixel strips.
  */
-//% weight=5 color=#2699BF icon="\uf110"
+//% color=#2699BF icon="\uf110"
 namespace neopixel {
 export enum Colors {
     //% block=red
