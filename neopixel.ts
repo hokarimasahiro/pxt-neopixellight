@@ -56,9 +56,9 @@ export enum Colors {
 
     /**
      * Shows all LEDs to a given color (range 0-255 for r, g, b).
-     * @param rgb RGB color of the LED, eg:colors(Colors.Red)
+     * @param rgb RGB color of the LED, eg:Colors.Red
      */
-    //% block="show color %rgb"
+    //% block="show color %rgb=neopixel_colors"
     export function showColor(rgb: number) {
 		for (let i=0;i < _length;i++){
 	        setPixelColor(i,rgb);
@@ -69,9 +69,9 @@ export enum Colors {
     /**
      * Set LED to a given color (range 0-255 for r, g, b).
      * @param pixeloffset position of the NeoPixel in the strip, eg:0
-     * @param rgb RGB color of the LED, eg:colors(Colors.Red)
+     * @param rgb RGB color of the LED, eg:Colors.Red
      */
-    //% block="set pixel color at %pixeloffset|to %rgb"
+    //% block="set pixel color at %pixeloffset|to %rgb=neopixel_colors"
     export function setPixelColor(pixeloffset: number, rgb: number): void {
         _buf[pixeloffset * 3 + 0] = unpackG(rgb) * (_brightness / 255);
         _buf[pixeloffset * 3 + 1] = unpackR(rgb) * (_brightness / 255);
