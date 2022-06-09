@@ -6,7 +6,7 @@
  * Functions to operate NeoPixel strips.
  */
 //% color=#2699BF icon="\uf110" block="neopixel"
-namespace neopixel {
+namespace neopixelLight {
 export enum Colors {
     //% block=red
     Red = 0xFF0000,
